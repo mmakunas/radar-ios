@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A55D0F113DB4D3F00569BA7 /* www in Resources */ = {isa = PBXBuildFile; fileRef = 1A55D0F013DB4D3F00569BA7 /* www */; };
 		1AD5931913DB4BFC0080A810 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AD5931813DB4BFC0080A810 /* Foundation.framework */; };
 		1AD5931B13DB4BFC0080A810 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AD5931A13DB4BFC0080A810 /* UIKit.framework */; };
 		1AD5931D13DB4BFC0080A810 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AD5931C13DB4BFC0080A810 /* CoreGraphics.framework */; };
@@ -35,6 +36,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A55D0F013DB4D3F00569BA7 /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; path = www; sourceTree = "<group>"; };
 		1AD5931413DB4BFC0080A810 /* radar-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "radar-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AD5931813DB4BFC0080A810 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1AD5931A13DB4BFC0080A810 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -49,9 +51,9 @@
 		1AD5932C13DB4BFC0080A810 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		1AD5932E13DB4BFC0080A810 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		1AD5933013DB4BFC0080A810 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
-		1AD5933413DB4BFC0080A810 /* radar-ios-Info.plist */ = {isa = PBXFileReference; path = "radar-ios-Info.plist"; sourceTree = "<group>"; };
+		1AD5933413DB4BFC0080A810 /* radar-ios-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "radar-ios-Info.plist"; sourceTree = "<group>"; };
 		1AD5933613DB4BFC0080A810 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		1AD5933813DB4BFC0080A810 /* radar-ios-Prefix.pch */ = {isa = PBXFileReference; path = "radar-ios-Prefix.pch"; sourceTree = "<group>"; };
+		1AD5933813DB4BFC0080A810 /* radar-ios-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "radar-ios-Prefix.pch"; sourceTree = "<group>"; };
 		1AD5933913DB4BFD0080A810 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1AD5933B13DB4BFD0080A810 /* PhoneGap.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PhoneGap.framework; path = /Users/Shared/PhoneGap/Frameworks/PhoneGap.framework; sourceTree = "<absolute>"; };
 		1AD5933F13DB4BFD0080A810 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = Resources/icons/icon.png; sourceTree = "<group>"; };
@@ -62,9 +64,9 @@
 		1AD5934A13DB4BFD0080A810 /* Default~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default~ipad.png"; path = "Resources/splash/Default~ipad.png"; sourceTree = "<group>"; };
 		1AD5934C13DB4BFD0080A810 /* Capture.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Capture.bundle; path = Resources/Capture.bundle; sourceTree = "<group>"; };
 		1AD5934E13DB4BFD0080A810 /* PhoneGap.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = PhoneGap.plist; sourceTree = "<group>"; };
-		1AD5935113DB4BFD0080A810 /* AppDelegate.h */ = {isa = PBXFileReference; name = AppDelegate.h; path = Classes/AppDelegate.h; sourceTree = "<group>"; };
+		1AD5935113DB4BFD0080A810 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Classes/AppDelegate.h; sourceTree = "<group>"; };
 		1AD5935213DB4BFD0080A810 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Classes/AppDelegate.m; sourceTree = "<group>"; };
-		1AD5935513DB4BFD0080A810 /* README */ = {isa = PBXFileReference; name = README; path = Plugins/README; sourceTree = "<group>"; };
+		1AD5935513DB4BFD0080A810 /* README */ = {isa = PBXFileReference; lastKnownFileType = text; name = README; path = Plugins/README; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 		1AD5930613DB4BFC0080A810 = {
 			isa = PBXGroup;
 			children = (
+				1A55D0F013DB4D3F00569BA7 /* www */,
 				1AD5933213DB4BFC0080A810 /* radar-ios */,
 				1AD5931713DB4BFC0080A810 /* Frameworks */,
 				1AD5931513DB4BFC0080A810 /* Products */,
@@ -266,6 +269,7 @@
 				1AD5934B13DB4BFD0080A810 /* Default~ipad.png in Resources */,
 				1AD5934D13DB4BFD0080A810 /* Capture.bundle in Resources */,
 				1AD5934F13DB4BFD0080A810 /* PhoneGap.plist in Resources */,
+				1A55D0F113DB4D3F00569BA7 /* www in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,6 +405,7 @@
 				1AD5935A13DB4BFD0080A810 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
