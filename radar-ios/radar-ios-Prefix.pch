@@ -1,0 +1,8 @@
+//
+// Prefix header for all source files of the 'radar-ios' target in the 'radar-ios' project
+//
+
+#ifdef __OBJC__
+  #import <UIKit/UIKit.h>
+  #import <Foundation/Foundation.h>
+#endif
