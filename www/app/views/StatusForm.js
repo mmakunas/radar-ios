@@ -26,44 +26,49 @@ app.views.StatusForm = Ext.extend(Ext.form.FormPanel, {
             ui: 'action',
             listeners: {
                 'tap': function () {
-                    //this.form.updateRecord(this.record, true);
-                    //console.log(this.form.getValues(false)['user']);
-                    navigator.geolocation.getCurrentPosition(
-                                        function(position) {
-                                        Ext.Ajax.request({
-                        url: 'http://169.254.229.158:8080/radar/api/',
-                        success: function (response, opts) {
-                            console.log('success ' + response.status);
-                        },
-                        failure: function (response, opts) {
-                            console.log('server-side failure with status code ' + response.status);
-                        },
-                        params: {
-                              name: this.form.getValues(false)['user'],
-                              data: JSON.stringify({
-                                  user : this.form.getValues(false)['user'],
-                                  what : this.form.getValues(false)['what'],
-                                  how : this.form.getValues(false)['how'],
-                                  lat:  position.coords.latitude,
-                                  long: position.coords.longitude
-                                  
-                                  })
-                              }
-                            
-                    });
-                    }, 
-                                        null, 
-                                         null);
-                    
-                    Ext.dispatch({
-                        controller: app.controllers.howyafeelin,
-                        action: 'index',
-                        //id: this.record.getId(),
-                        animation: {
-                            type: 'slide',
-                            direction: 'right'
-                        }
-                    });
+                    thisView = this;
+                    navigator.geolocation.getCurrentPosition(function (position) {
+                        Ext.Ajax.request({
+                            url: 'http://50.19.215.109:8080/radar/api/',
+                            success: function (response, opts) {
+                                console.log('success ' + response.status);
+                                Ext.dispatch({
+                                    controller: app.controllers.howyafeelin,
+                                    action: 'index',
+                                    animation: {
+                                        type: 'slide',
+                                        direction: 'right'
+                                    }
+                                });
+                            },
+                            failure: function (response, opts) {
+                                console.log('server-side failure with status code ' + response.status);
+                                Ext.dispatch({
+                                    controller: app.controllers.howyafeelin,
+                                    action: 'index',
+                                    animation: {
+                                        type: 'slide',
+                                        direction: 'right'
+                                    }
+                                });
+                            },
+                            params: {
+                                name: thisView.form.getValues(false)['user'],
+                                data: JSON.stringify({
+                                    user: thisView.form.getValues(false)['user'],
+                                    what: thisView.form.getValues(false)['what'],
+                                    how: thisView.form.getValues(false)['how'],
+                                    lat: position.coords.latitude,
+                                    long: position.coords.longitude
+
+                                })
+                            }
+
+                        })
+                    }, logError);
+
+
+
                 }
             }
         }]

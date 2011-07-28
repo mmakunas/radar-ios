@@ -37,7 +37,7 @@
 
 /* Begin PBXFileReference section */
 		1A55D0F013DB4D3F00569BA7 /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; path = www; sourceTree = "<group>"; };
-		1AD5931413DB4BFC0080A810 /* radar-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "radar-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1AD5931413DB4BFC0080A810 /* Radar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Radar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AD5931813DB4BFC0080A810 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1AD5931A13DB4BFC0080A810 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		1AD5931C13DB4BFC0080A810 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -114,7 +114,7 @@
 		1AD5931513DB4BFC0080A810 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1AD5931413DB4BFC0080A810 /* radar-ios.app */,
+				1AD5931413DB4BFC0080A810 /* Radar.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -213,9 +213,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1AD5931313DB4BFC0080A810 /* radar-ios */ = {
+		1AD5931313DB4BFC0080A810 /* Radar */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1AD5935813DB4BFD0080A810 /* Build configuration list for PBXNativeTarget "radar-ios" */;
+			buildConfigurationList = 1AD5935813DB4BFD0080A810 /* Build configuration list for PBXNativeTarget "Radar" */;
 			buildPhases = (
 				1AD5930D13DB4BFC0080A810 /* Sources */,
 				1AD5930E13DB4BFC0080A810 /* Frameworks */,
@@ -228,9 +228,9 @@
 			);
 			dependencies = (
 			);
-			name = "radar-ios";
+			name = Radar;
 			productName = "radar-ios";
-			productReference = 1AD5931413DB4BFC0080A810 /* radar-ios.app */;
+			productReference = 1AD5931413DB4BFC0080A810 /* Radar.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -250,7 +250,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1AD5931313DB4BFC0080A810 /* radar-ios */,
+				1AD5931313DB4BFC0080A810 /* Radar */,
 			);
 		};
 /* End PBXProject section */
@@ -398,7 +398,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1AD5935813DB4BFD0080A810 /* Build configuration list for PBXNativeTarget "radar-ios" */ = {
+		1AD5935813DB4BFD0080A810 /* Build configuration list for PBXNativeTarget "Radar" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1AD5935913DB4BFD0080A810 /* Debug */,
