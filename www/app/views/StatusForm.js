@@ -76,7 +76,7 @@ app.views.StatusForm = Ext.extend(Ext.form.FormPanel, {
     submitOnAction: false,
     items: [{
         name: 'user',
-        label: 'Who are you',
+        label: 'Who are you?',
         xtype: 'selectfield',
         options: [{
             text: 'Jenny',
