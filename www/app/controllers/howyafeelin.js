@@ -12,7 +12,7 @@ app.controllers.howyafeelin = new Ext.Controller({
         );
     },
     shake: function(options) {
-        //app.views.statusForm.addFormToButtons();
+        app.views.shakeForm.addFormToButtons();
         app.views.viewport.setActiveItem(
         app.views.shakeForm, options.animation
         );

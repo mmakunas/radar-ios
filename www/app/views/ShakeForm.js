@@ -8,6 +8,7 @@ app.views.ShakeForm = Ext.extend(Ext.form.FormPanel, {
             ui: 'back',
             listeners: {
                 'tap': function () {
+                    stopWatch();
                     Ext.dispatch({
                         controller: app.controllers.howyafeelin,
                         action: 'index',
@@ -20,10 +21,6 @@ app.views.ShakeForm = Ext.extend(Ext.form.FormPanel, {
             }
         }, {
             xtype: 'spacer'
-        }, {
-            id: 'submit',
-            text: 'Submit',
-            ui: 'action'
         }]
     }],
     submitOnAction: false,
@@ -46,11 +43,29 @@ app.views.ShakeForm = Ext.extend(Ext.form.FormPanel, {
         height: '50'
     },
     new Ext.Button({
+        id: 'theBigButton',
         ui: 'confirm',
-        text: 'Click then shake.'
+        text: 'Click then shake.',
+        listeners: {
+                'tap': function () {
+                    thisButton = this;
+                    shakeUser = this.form.getValues(false)['user'];
+                    rLogit(shakeUser);
+                    startWatch(postShakeToS3);
+                    Ext.dispatch({
+                        controller: app.controllers.howyafeelin,
+                        action: 'index',
+                        animation: {
+                            type: 'slide',
+                            direction: 'right'
+                        }
+                    });
+                }
+            }
     })],
     addFormToButtons: function () {
-        var toolbar = this.getDockedItems()[0];
-        toolbar.getComponent('submit').form = this;
-    }
+        this.getComponent('theBigButton').form = this;
+    },
+    
+    
 });
