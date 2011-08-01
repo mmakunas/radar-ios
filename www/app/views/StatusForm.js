@@ -53,7 +53,7 @@ app.views.StatusForm = Ext.extend(Ext.form.FormPanel, {
                                 });
                             },
                             params: {
-                                name: thisView.form.getValues(false)['user'],
+                                name: thisView.form.getValues(false)['user'] + '-feeling',
                                 data: JSON.stringify({
                                     user: thisView.form.getValues(false)['user'],
                                     what: thisView.form.getValues(false)['what'],
@@ -65,7 +65,7 @@ app.views.StatusForm = Ext.extend(Ext.form.FormPanel, {
                             }
 
                         })
-                    }, logError);
+                    }, logError, { maximumAge: 6000000, timeout: 5000, enableHighAccuracy: true });
 
 
 
@@ -78,16 +78,7 @@ app.views.StatusForm = Ext.extend(Ext.form.FormPanel, {
         name: 'user',
         label: 'Who are you?',
         xtype: 'selectfield',
-        options: [{
-            text: 'Jenny',
-            value: 'jenny'
-        }, {
-            text: 'Michael',
-            value: 'michael'
-        }, {
-            text: 'Matt',
-            value: 'matt'
-        }]
+        options: allUsers
     }, {
         name: 'what',
         label: 'What are you doing?',

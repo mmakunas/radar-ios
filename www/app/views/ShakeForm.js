@@ -28,16 +28,7 @@ app.views.ShakeForm = Ext.extend(Ext.form.FormPanel, {
         name: 'user',
         label: 'Who are you?',
         xtype: 'selectfield',
-        options: [{
-            text: 'Jenny',
-            value: 'jenny'
-        }, {
-            text: 'Michael',
-            value: 'michael'
-        }, {
-            text: 'Matt',
-            value: 'matt'
-        }]
+        options: allUsers
     }, {
         xtype: 'spacer',
         height: '50'
@@ -52,14 +43,14 @@ app.views.ShakeForm = Ext.extend(Ext.form.FormPanel, {
                     shakeUser = this.form.getValues(false)['user'];
                     rLogit(shakeUser);
                     startWatch(postShakeToS3);
-                    Ext.dispatch({
-                        controller: app.controllers.howyafeelin,
-                        action: 'index',
-                        animation: {
-                            type: 'slide',
-                            direction: 'right'
-                        }
-                    });
+                    //Ext.dispatch({
+                    //    controller: app.controllers.howyafeelin,
+                    //    action: 'index',
+                    //    animation: {
+                    //        type: 'slide',
+                    //        direction: 'right'
+                    //    }
+                    //});
                 }
             }
     })],

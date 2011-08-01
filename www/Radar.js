@@ -1,3 +1,32 @@
+allUsers = [{
+            text: 'Jenny',
+            value: 'jenny'
+        }, {
+            text: 'Michael',
+            value: 'michael'
+        }, {
+            text: 'Matt',
+            value: 'matt'
+        }, {
+            text: 'Dave',
+            value: 'dave'
+        }, {
+            text: 'Jackie',
+            value: 'jackie'
+        }, {
+            text: 'Brian',
+            value: 'brian'
+        }, {
+            text: 'Jacob',
+            value: 'jacob'
+        }, {
+            text: 'Deirdre',
+            value: 'deidre'
+        }, {
+            text: 'Jeremy',
+            value: 'jeremy'
+        }];
+
 function rLogit(baz) {
     console.log(baz);
 }
@@ -67,7 +96,7 @@ function onError() {
 function postShakeToS3(acceleration) {
     navigator.geolocation.getCurrentPosition(function (position) {
         rLogit(shakeUser);
-        postToS3(shakeUser, {
+        postToS3(shakeUser + '-shake', {
             user: shakeUser,
             lat: position.coords.latitude,
             long: position.coords.longitude,
@@ -76,8 +105,7 @@ function postShakeToS3(acceleration) {
             acc_z: acceleration.z,
             acc_timestamp: acceleration.timestamp}
             );
-            stopWatch();
-        }, logError);
+        }, logError, { maximumAge: 6000000, timeout: 5000, enableHighAccuracy: true });
         
 
     }
